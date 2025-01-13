@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge" />-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-4.6.2/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="assets\font-awesome-4.7.0\css\font-awesome.min.css">-->
+    <!--<link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.css">-->
+    <!--<link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">-->
+    <!--<link rel="stylesheet" href="assets/fontawesome-free-6.5.1-web/css/all.min.css">-->
+    <link rel="stylesheet" href="assets/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css">
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>ecommerce Website</title>
+  <style>
+    /* style.css */
+
+    .product-image {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    
+    .product-name {
+        font-weight: bold;
+    }
+    
+    .product-description {
+        font-size: 14px;
+        color: #666;
+    }
+    
+    #cart-body {
+        padding: 20px;
+    }
+    
+    #cart-body tr {
+        border-bottom: 1px solid #ddd;
+    }
+    
+    #cart-body tr:last-child {
+        border-bottom: none;
+    }
+    
+    #cart-body td {
+        padding: 10px;
+    }
+    
+    #cart-body th {
+        padding: 10px;
+        background-color: #f0f0f0;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    #cart-body .remove-item {
+        color: #666;
+        cursor: pointer;
+    }
+    
+    #cart-body .remove-item:hover {
+        color: #333;
+    }
+    
+    .modal-content {
+        padding: 20px;
+    }
+    
+    .modal-body {
+        padding: 20px;
+    }
+    
+    .product-image-modal {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+  </style>
+    </head>
+  <body>
+    <!-- Header -->
+    <!--Navbar-->
+   
+    <header class="section-header">
+      <section class="header-main border-bottom">
+          	<div class="container-fluid">
+              <div class="row align-items-center">
+                  <div class="col-lg-3 col-sm-4 col-md-4 col-5"> 
+                    <a href="#" class="brand-wrap" data-abc="true">
+                          <!-- <img class="logo" src="http://ampexamples.com/data/upload/2017/08/bootstrap2_logo.png"> --> 
+                        <span class="logo"><!--BBBOOTSTRAP-->
+                          <img src="assets/img/logo.png" alt="">
+                        </span> 
+                    </a> 
+                  </div>
+
+                  <div class="col-lg-4 col-xl-5 col-sm-8 col-md-4 d-none d-md-block">
+
+                      <form action="#" class="search-wrap">
+                          <div class="input-group w-100"> 
+                            <input type="text" class="form-control search-form" style="width:65%; font-size:15px" placeholder="Search">
+                              <div class="input-group-append"> 
+                                <button class="btn btn-primary search-button" type="submit">
+                                 <i class="fa fa-search"></i> 
+                                </button> 
+                              </div>
+                          </div>
+                      </form>
+                      
+                  </div>
+                  <div class="col-lg-5 col-xl-4 col-sm-8 col-md-4 col-7">
+                      <div class="d-flex justify-content-end"> 
+                        <div class="dropdown show">
+                          <a class="btn dropdown-toggle login" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-regular fa-user"></i> User
+                          </a>
+                        
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="login.html">Login</a>
+                            <a class="dropdown-item" href="signup.html">Sign in</a>
+                            <!--<a class="dropdown-item" href="#">Something else here</a>-->
+                          </div>
+                        </div>
+
+                        <span class="vl"></span>
+                          <!--<div class="dropdown btn-group"> 
+                            <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-abc="true">
+                              <i class="fas fa fa-bell"></i>
+                            </a>
+                              <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
+                                  <li>
+                                      <div class="notification-title">More Info</div>
+                                      <div class="notification-list">
+                                          <div class="list-group"> <a href="affiliates" class="list-group-item list-group-item-action active" data-abc="true">
+                                                  <div class="notification-info">
+                                                      <div class="notification-list-user-img"><img src="https://img.icons8.com/nolan/100/000000/helping-hand.png" alt="" class="user-avatar-md rounded-circle"></div>
+                                                      <div class="notification-list-user-block"><span class="notification-list-user-name">Affiliate program</span> </div>
+                                                  </div>
+                                              </a> <a href="redemption-center" class="list-group-item list-group-item-action active" data-abc="true">
+                                                  <div class="notification-info">
+                                                      <div class="notification-list-user-img"><img src="https://img.icons8.com/bubbles/100/000000/prize.png" alt="" class="user-avatar-md rounded-circle"></div>
+                                                      <div class="notification-list-user-block"><span class="notification-list-user-name">Redemption Center</span> </div>
+                                                  </div>
+                                              </a> <a href="#" class="list-group-item list-group-item-action active" data-abc="true">
+                                                  <div class="notification-info">
+                                                      <div class="notification-list-user-img"><img src="https://img.icons8.com/ultraviolet/100/000000/medal.png" alt="" class="user-avatar-md rounded-circle"></div>
+                                                      <div class="notification-list-user-block"><span class="notification-list-user-name">Achievements</span> </div>
+                                                  </div>
+                                              </a> <a href="#" class="list-group-item list-group-item-action active" data-abc="true">
+                                                  <div class="notification-info">
+                                                      <div class="notification-list-user-img"><img src="https://img.icons8.com/bubbles/100/000000/call-female.png" alt="" class="user-avatar-md rounded-circle"></div>
+                                                      <div class="notification-list-user-block"><span class="notification-list-user-name">Contact us</span> </div>
+                                                  </div>
+                                              </a> 
+                                          </div>
+                                      </div>
+                                  </li>
+                              </ul>
+                          </div> -->
+                          <!--<li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i>Cart</a>
+                          </li>-->
+                          <a class="nav-link nav-user-img" href="#"><!--data-toggle="modal" data-target="#login-modal" data-abc="true"-->
+                            <span class="login"><i class="fas fa fa-shopping-cart"></i> Cart</span>
+                          </a>
+
+                          
+
+                          <span class="vl"></span> 
+                          <a class="nav-link nav-user-img" href="#"><!-- data-toggle="modal" data-target="#login-modal" data-abc="true"-->
+                            <span class="login"><i class="fas fa-regular fa-heart"></i> Wishlist</span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          	</div>
+      </section>
+
+
+      <nav class="navbar navbar-expand-md navbar-main border-bottom">
+          <div class="container-fluid">
+              <form class="d-md-none my-2">
+                  <div class="input-group"> <input type="search" name="search" class="form-control" placeholder="Search" required="">
+                      <div class="input-group-append"> 
+                        <button type="submit" class="btn btn-secondary"> 
+                          <i class="fa fa-search"></i> 
+                        </button> 
+                      </div>
+                  </div>
+              </form> 
+              <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#dropdown6" aria-expanded="false"> 
+                <span class="navbar-toggler-icon"></span> 
+              </button>
+              <div class="navbar-collapse collapse" id="dropdown6"><!-- style=""-->
+                  <ul class="navbar-nav mr-auto">
+                      <li class="nav-item dropdown"> 
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-abc="true" aria-expanded="false">Laptops</a>
+                          <div class="dropdown-menu"> 
+                            <a class="dropdown-item" href="#" data-abc="true">Lenovo</a> 
+                            <a class="dropdown-item" href="#" data-abc="true">Dell</a> 
+                            <a class="dropdown-item" href="#" data-abc="true">HP</a> 
+                            <a class="dropdown-item" href="#" data-abc="true">Apple</a> 
+                            <a class="dropdown-item" href="#" data-abc="true">Asus</a>
+                          </div>
+                      </li>
+                      <li class="nav-item"> <a class="nav-link" href="#" data-abc="true">Refurbished Mobile</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#" data-abc="true">Accessories & Peripheral</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#" data-abc="true">Blog</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#" data-abc="true">Support</a> </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  </header>
+
+    <!---- End of Navbar ---->
+
+
+
+
+
+
+    <div class="container">
+        <h1>Cart</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="cart-body">
+                <!-- cart items will be displayed here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- product modal -->
+    <div class="modal fade" id="product-modal" tabindex="-1" role="dialog" aria-labelledby="product-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="product-modal-label">Product Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/earbud6.jpeg" alt="" class="product-image">
+                    <h2 class="product-name"></h2>
+                    <p class="product-description"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+    const cart = [
+    {
+        id: 1,
+        name: 'Product 1',
+        price: 19.99,
+        quantity: 1,
+        imageUrl: 'assets/img/Samsung-S24.jpeg',
+        description: 'This is product 1'
+    },
+    {
+        id: 2,
+        name: 'Product 2',
+        price: 9.99,
+        quantity: 2,
+        imageUrl: 'images/product2.jpg',
+        description: 'This is product 2'
+    },
+    // ...
+];
+
+const cartBody = document.getElementById('cart-body');
+
+cart.forEach((item) => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+        <td>
+            <img src="${item.imageUrl}" alt="" class="product-image">
+            <a href="#" data-toggle="modal" data-target="#product-modal">
+                <span class="product-name">${item.name}</span>
+            </a>
+        </td>
+        <td>
+            <input type="number" class="form-control quantity" value="${item.quantity}" min="1">
+            <button class="btn btn-sm btn-primary increase-quantity">+</button>
+            <button class="btn btn-sm btn-primary decrease-quantity">-</button>
+        </td>
+        <td>
+                    <td>$${item.price}</td>
+        <td>$${item.price * item.quantity}</td>
+        <td>
+            <button class="btn btn-sm btn-danger remove-item">Remove</button>
+        </td>
+    `;
+    cartBody.appendChild(row);
+});
+
+// Add event listeners to quantity buttons
+cartBody.addEventListener('click', (e) => {
+    if (e.target.classList.contains('increase-quantity')) {
+        const quantityInput = e.target.previousElementSibling;
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+        updateTotal(e.target.closest('tr'));
+    } else if (e.target.classList.contains('decrease-quantity')) {
+        const quantityInput = e.target.nextElementSibling;
+        if (quantityInput.value > 1) {
+            quantityInput.value = parseInt(quantityInput.value) - 1;
+            updateTotal(e.target.closest('tr'));
+        }
+    } else if (e.target.classList.contains('remove-item')) {
+        e.target.closest('tr').remove();
+    }
+});
+
+// Update total price when quantity changes
+function updateTotal(row) {
+    const price = parseFloat(row.cells[2].textContent);
+    const quantity = parseInt(row.cells[1].querySelector('input').value);
+    const total = price * quantity;
+    row.cells[3].textContent = `$${total.toFixed(2)}`;
+}
+
+// Show product details in modal
+cartBody.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+        const product = cart.find((item) => item.name === e.target.textContent);
+        const modal = document.getElementById('product-modal');
+        modal.querySelector('.product-image-modal').src = product.imageUrl;
+        modal.querySelector('.product-name').textContent = product.name;
+        modal.querySelector('.product-description').textContent = product.description;
+    }
+});
+</script>
+
+
+    <script type="text/javascript" src="assets/js/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-4.6.2/js/bootstrap.bundle.min.js"></script>  
+    <script type="text/javascript" src="assets/bootstrap-4.6.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
+    <script type="text/javascript" src="assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    
+
+</body>  
+</html>

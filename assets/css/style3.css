@@ -1,0 +1,174 @@
+/*body{
+    background-color: blue;
+}
+.product-main{
+    margin: 22px 10px;
+}
+.outt{
+    display: none;
+}
+.leftlst{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 15px;
+    bottom: 0px;
+    background: #fff;
+    width: 40px;
+    border: none;
+    z-index: 100;
+    border-radius: 0 5px 5px 0;
+    height: 100px;
+    outline: none;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .11);
+    margin-top: 200px;
+}
+.rightlst{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 15px;
+    z-index: 100;
+    background: #fff;
+    width: 40px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    height: 100px;
+    outline: none;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .11);
+}
+.btn-default i{
+    font-size: 16px;
+    color: #000;
+}
+.recarousel{
+    float: left;
+    overflow: hidden;
+    width: 100%;
+}
+.recarousel-inner{
+    transition: 1s ease all; 
+    float: left;
+    height: 350px;
+}
+.recarousel-inner .item{
+    float: left;
+}
+.product{
+    width: 100%;
+    height: 350px;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 10px;
+    background: #fff;
+    border: solid 0.9px transparent;
+    transition: .5s;
+}
+.product a{
+    display: block;
+}
+.product:hover{
+    z-index: 50;
+    border-radius: 3px;
+    text-decoration: none;
+    box-shadow: 0 7px 17px 0px rgba(23, 84, 116, 0.18);
+}
+.product-image{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+.product-image img{
+    width: 50%;
+    height: 50%;
+}
+.product-txt{
+    width: 100%;
+    height: auto;
+}*/
+
+
+
+
+
+
+
+
+/* Custom Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ddd;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    border-bottom: 1px solid #ddd;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    color: #ddd;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-nav .nav-link {
+        padding: 10px 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-nav .nav-link {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

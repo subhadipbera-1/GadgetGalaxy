@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge" />-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-4.6.2/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="assets\font-awesome-4.7.0\css\font-awesome.min.css">-->
+    <!--<link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.css">-->
+    <!--<link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">-->
+    <!--<link rel="stylesheet" href="assets/fontawesome-free-6.5.1-web/css/all.min.css">-->
+    <link rel="stylesheet" href="assets/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css">
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Order Details page</title>
+  <style>
+    /*---Navbar Start here---*/
+    .main-navbar{
+      border-bottom: 1px solid #ccc;
+  }
+  .main-navbar .top-navbar{
+      background-color: #2874f0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .main-navbar .top-navbar .brand-name{
+      color: #fff;
+      font-size: 21px;
+  }
+  /*.brand-name{
+    font-size: 18px;
+  }*/
+  .main-navbar .top-navbar .nav-link{
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+  }
+  .main-navbar .top-navbar .dropdown-menu{
+      padding: 0px 0px;
+      border-radius: 0px;
+  }
+  .main-navbar .top-navbar .dropdown-menu .dropdown-item{
+      padding: 8px 16px;
+      border-bottom: 1px solid #ccc;
+      font-size: 14px;
+  }
+  .main-navbar .top-navbar .dropdown-menu .dropdown-item i{
+      width: 20px;
+      text-align: center;
+      color: #2874f0;
+      font-size: 14px;
+  }
+  .main-navbar .navbar{
+      padding: 0px;
+      background-color: #ddd;
+  }
+  .main-navbar .navbar .nav-item .nav-link{
+      padding: 8px 20px;
+      color: #000;
+      font-size: 15px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+      .main-navbar .top-navbar .nav-link{
+          font-size: 12px;
+          padding: 8px 10px;
+      }
+  }
+  @media only screen and (max-width: 700px) {
+    .main-navbar .top-navbar .nav-link{
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}
+    /*--------End of Navbar-------------*/
+/* style.css */
+/*.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+.list-group-item.active a {
+    color: white;
+    background-color: #007bff;
+}*/
+
+
+
+/* Default styles for desktop devices *
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  /* Media query for tablet devices (768px to 992px) *
+  @media (max-width: 992px) {
+    .container {
+      max-width: 90%;
+    }
+    .card {
+      margin-bottom: 10px;
+    }
+    .card img {
+      height: 120px;
+    }
+    .card-body {
+      padding: 10px;
+    }
+  }
+  
+  /* Media query for mobile devices (576px to 768px) *
+  @media (max-width: 768px) {
+    .container {
+      max-width: 95%;
+    }
+    .card {
+      margin-bottom: 5px;
+    }
+    .card img {
+      height: 100px;
+    }
+    .card-body {
+      padding: 5px;
+    }
+  }
+  
+  /* Media query for small mobile devices (0px to 576px) *
+  @media (max-width: 576px) {
+    .container {
+      max-width: 100%;
+    }
+    .card {
+      margin-bottom: 0;
+    }
+    .card img {
+      height: 80px;
+    }
+    .card-body {
+      padding: 0;
+    }
+  }*/
+
+/*************************** Order History Start *******************/
+/*.order-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.order-card img {
+    width: 60px;
+    height: auto;
+}
+.order-status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.875rem;
+}
+.fulfilled {
+    background-color: #28a745;
+    color: white;
+}
+.confirmed {
+    background-color: #17a2b8;
+    color: white;
+}
+.partially-shipped {
+    background-color: #dc3545;
+    color: white;
+}
+@media (max-width: 768px) {
+    .order-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .order-details div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .order-card img {
+        width: 100%;
+        max-width: 80px;
+    }
+}*/
+
+
+
+.order-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f9fa;
+}
+.order-card img {
+    width: 60px;
+    height: auto;
+}
+.order-details {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+}
+.order-status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.875rem;
+}
+.fulfilled {
+    background-color: #28a745;
+    color: white;
+}
+.confirmed {
+    background-color: #17a2b8;
+    color: white;
+}
+.partially-shipped {
+    background-color: #dc3545;
+    color: white;
+}
+.ellipsis {
+    font-size: 1.5rem;
+    color: #6c757d;
+    cursor: pointer;
+}
+  /*---------Footer----------------*/
+  .footer-area{
+    padding: 40px 0px;
+    background-color: #2874f0;
+    color: #fff;
+}
+.footer-area a{
+    text-decoration: none;
+}
+.footer-area .footer-heading{
+    font-size: 24px;
+    color: #fff;
+}
+.footer-area .footer-underline{
+    height: 1px;
+    width: 70px;
+    background-color: #ddd;
+    margin: 10px 0px;
+}
+.copyright-area{
+    padding: 14px 0px;
+    background-color: #262626;
+}
+.copyright-area p{
+    margin-bottom: 0px;
+    color: #fff;
+}
+.copyright-area .social-media{
+    text-align: end;
+    color: #fff;
+}
+.copyright-area .social-media a{
+    margin: 0px 10px;
+    color: #fff;
+    width: 20px;
+}
+  </style>
+    </head>
+  <body>
+    <!-- Header -->
+    <!--Navbar-->
+   
+    <div class="main-navbar shadow-sm sticky-top">
+      <div class="top-navbar">
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-md-2 my-auto d-sm-4 d-md-block d-lg-block">  <!--d-none d-sm-none-->
+                      <h5 class="brand-name">GadgetGalaxy</h5>
+                  </div>
+                  <!--<div class="col-md-5 my-auto">
+                      <form role="search">
+                          <div class="input-group">
+                              <input type="search" placeholder="Search your product" class="form-control" />
+                              <button class="btn bg-white" type="submit">
+                                  <i class="fa fa-search"></i>
+                              </button>
+                          </div>
+                      </form>
+                  </div>-->
+
+                  <div class="col-md-5 my-auto">
+
+                    <form action="#" class="search-wrap">
+                        <div class="input-group w-100"> 
+                          <input type="text" class="form-control search-form" style="width:65%;font-size:15px;/* padding-left: 20px; */margin-left: 10px;/* margin-right: 10px; */" placeholder="Search">
+                            <div class="input-group-append"> 
+                              <button class="btn btn-primary search-button" type="submit">
+                               <i class="fa fa-search"></i> 
+                              </button> 
+                            </div>
+                        </div>
+                    </form>
+                    
+                </div>
+                  <div class="col-md-5 my-auto">
+                      <ul class="nav justify-content-end">
+                          
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="fa fa-user"></i> Username 
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <a class="dropdown-item" href="login.html">Login</a>
+                              </div>
+                              <div class="col-md-6">
+                                <a class="dropdown-item" href="signup.html">SignUp</a>
+                              </div>
+                            </div>
+                            <!--<li><a class="dropdown-item" href="#">My Account</a></li>-->
+                          <li><a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a></li>
+
+                          <li><a class="dropdown-item" href="#"><i class="fa fa-list"></i> My Orders</a></li>
+                          <li><a class="dropdown-item" href="wishlist.html"><i class="fa fa-heart"></i> My Wishlist</a></li>
+                          <li><a class="dropdown-item" href="cart.html"><i class="fa fa-shopping-cart"></i> My Cart</a></li>
+                          <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+                          </ul>
+                      </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                  <i class="fa fa-shopping-cart"></i> Cart (0)
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                  <i class="fa fa-heart"></i> Wishlist (0)
+                              </a>
+                          </li>
+
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      
+      <!--<nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+              <!--<a class="navbar-brand d-block d-sm-block d-md-none d-lg-none" href="#">
+                  Funda Ecom
+              </a>--
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbar">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">All Categories</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">New Arrivals</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Featured Products</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Electronics</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Fashions</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Accessories</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Appliances</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>-->
+    <!--</div>-->
+
+
+
+
+
+
+
+
+
+    <!--<header class="section-header">
+      <section class="header-main border-bottom">
+          	<div class="container-fluid">
+              <div class="row align-items-center">
+                  <div class="col-lg-3 col-sm-4 col-md-4 col-5"> 
+                    <a href="#" class="brand-wrap" data-abc="true">
+                          <!-- <img class="logo" src="http://ampexamples.com/data/upload/2017/08/bootstrap2_logo.png"> -- 
+                        <span class="logo"><!--BBBOOTSTRAP--
+                          <img src="assets/img/logo.png" alt="">
+                        </span> 
+                    </a> 
+                  </div>
+
+                  <div class="col-lg-4 col-xl-5 col-sm-8 col-md-4 d-none d-md-block">
+
+                      <form action="#" class="search-wrap">
+                          <div class="input-group w-100"> 
+                            <input type="text" class="form-control search-form" style="width:65%; font-size:15px" placeholder="Search">
+                              <div class="input-group-append"> 
+                                <button class="btn btn-primary search-button" type="submit">
+                                 <i class="fa fa-search"></i> 
+                                </button> 
+                              </div>
+                          </div>
+                      </form>
+                      
+                  </div>
+                  <div class="col-lg-5 col-xl-4 col-sm-8 col-md-4 col-7">
+                      <div class="d-flex justify-content-end"> 
+                        <div class="dropdown show">
+                          <a class="btn dropdown-toggle login" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-regular fa-user"></i> User
+                          </a>
+                        
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="login.html">Login</a>
+                            <a class="dropdown-item" href="signup.html">Sign in</a>
+                            <!--<a class="dropdown-item" href="#">Something else here</a>--
+                          </div>
+                        </div>
+
+                        <span class="vl"></span>
+                          <!--<div class="dropdown btn-group"> 
+                            <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-abc="true">
+                              <i class="fas fa fa-bell"></i>
+                            </a>
+                              <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
+                                  <li>
+                                      <div class="notification-title">More Info</div>
+                                      <div class="notification-list">
+                                          <div class="list-group"> <a href="affiliates" class="list-group-item list-group-item-action active" data-abc="true">
+                                                  <div class="notification-info">
+                                                      <div class="notification-list-user-img"><img src="https://img.icons8.com/nolan/100/000000/helping-hand.png" alt="" class="user-avatar-md rounded-circle"></div>
+                                                      <div class="notification-list-user-block"><span class="notification-list-user-name">Affiliate program</span> </div>
+                                                  </div>
+                                              </a> <a href="redemption-center" class="list-group-item list-group-item-action active" data-abc="true">
+                                                  <div class="notification-info">
+                                                      <div class="notification-list-user-img"><img src="https://img.icons8.com/bubbles/100/000000/prize.png" alt="" class="user-avatar-md rounded-circle"></div>
+                                                      <div class="notification-list-user-block"><span class="notification-list-user-name">Redemption Center</span> </div>
+                                                  </div>
+                                              </a> <a href="#" class="list-group-item list-group-item-action active" data-abc="true">
+                                                  <div class="notification-info">
+                                                      <div class="notification-list-user-img"><img src="https://img.icons8.com/ultraviolet/100/000000/medal.png" alt="" class="user-avatar-md rounded-circle"></div>
+                                                      <div class="notification-list-user-block"><span class="notification-list-user-name">Achievements</span> </div>
+                                                  </div>
+                                              </a> <a href="#" class="list-group-item list-group-item-action active" data-abc="true">
+                                                  <div class="notification-info">
+                                                      <div class="notification-list-user-img"><img src="https://img.icons8.com/bubbles/100/000000/call-female.png" alt="" class="user-avatar-md rounded-circle"></div>
+                                                      <div class="notification-list-user-block"><span class="notification-list-user-name">Contact us</span> </div>
+                                                  </div>
+                                              </a> 
+                                          </div>
+                                      </div>
+                                  </li>
+                              </ul>
+                          </div> --
+                          <!--<li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i>Cart</a>
+                          </li>--
+                          <a class="nav-link nav-user-img" href="#"><!--data-toggle="modal" data-target="#login-modal" data-abc="true"--
+                            <span class="login"><i class="fas fa fa-shopping-cart"></i> Cart</span>
+                          </a>
+
+                          
+
+                          <span class="vl"></span> 
+                          <a class="nav-link nav-user-img" href="#"><!-- data-toggle="modal" data-target="#login-modal" data-abc="true"--
+                            <span class="login"><i class="fas fa-regular fa-heart"></i> Wishlist</span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          	</div>
+      </section>
+</header>-->
+
+      <nav class="navbar navbar-expand-md navbar-main border-bottom">
+          <div class="container-fluid">
+              <!--<form class="d-md-none my-2">
+                  <div class="input-group"> 
+                    <input type="text" name="search" class="form-control" placeholder="Search" required="" style="height: auto; font-size:15px;">
+                      <div class="input-group-append"> 
+                        <button type="submit" class="btn btn-secondary"> 
+                          <i class="fa fa-search"></i> 
+                        </button> 
+                      </div>
+                  </div>
+              </form> -->
+              <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#dropdown6" aria-expanded="false"> 
+                <span class="navbar-toggler-icon"></span> 
+              </button>
+              <div class="navbar-collapse collapse" id="dropdown6"><!-- style=""-->
+                  <ul class="navbar-nav mr-auto">
+                      <li class="nav-item dropdown"> 
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-abc="true" aria-expanded="false">Laptops</a>
+                          <div class="dropdown-menu"> 
+                            <a class="dropdown-item" href="#" data-abc="true">Lenovo</a> 
+                            <a class="dropdown-item" href="#" data-abc="true">Dell</a> 
+                            <a class="dropdown-item" href="#" data-abc="true">HP</a> 
+                            <a class="dropdown-item" href="#" data-abc="true">Apple</a> 
+                            <a class="dropdown-item" href="#" data-abc="true">Asus</a>
+                          </div>
+                      </li>
+                      <li class="nav-item"> <a class="nav-link" href="#" data-abc="true">Refurbished Mobile</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#" data-abc="true">Accessories & Peripheral</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#" data-abc="true">Blog</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#" data-abc="true">Support</a> </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+
+    <!---- End of Navbar ---->
+
+
+
+    <div class="container mt-5">
+        <div class="order-card">
+            <img src="https://via.placeholder.com/60" alt="Product Image">
+            <div class="order-details">
+                <div>
+                    <strong>Order #SO-13487</strong><br>
+                    Gasper Antunes
+                </div>
+                <div>
+                    <span class="order-status fulfilled">Fulfilled</span>
+                </div>
+                <div>$2674.00</div>
+                <div>Today</div>
+            </div>
+            <div class="ellipsis">...</div>
+        </div>
+    
+        <div class="order-card">
+            <img src="https://via.placeholder.com/60" alt="Product Image">
+            <div class="order-details">
+                <div>
+                    <strong>Order #SO-13453</strong><br>
+                    Aartsen van
+                </div>
+                <div>
+                    <span class="order-status confirmed">Confirmed</span>
+                </div>
+                <div>$3454.00</div>
+                <div>Yesterday</div>
+            </div>
+            <div class="ellipsis">...</div>
+        </div>
+    
+        <div class="order-card">
+            <img src="https://via.placeholder.com/60" alt="Product Image">
+            <div class="order-details">
+                <div>
+                    <strong>Order #SO-13498</strong><br>
+                    Trashes Habard
+                </div>
+                <div>
+                    <span class="order-status partially-shipped">Partially shipped</span>
+                </div>
+                <div>$6274.00</div>
+                <div>May 12, 2020</div>
+            </div>
+            <div class="ellipsis">...</div>
+        </div>
+    
+        <div class="order-card">
+            <img src="https://via.placeholder.com/60" alt="Product Image">
+            <div class="order-details">
+                <div>
+                    <strong>Order #SO-16499</strong><br>
+                    Samban Hubart
+                </div>
+                <div>
+                    <span class="order-status fulfilled">Fulfilled</span>
+                </div>
+                <div>$6375.00</div>
+                <div>May 11, 2020</div>
+            </div>
+            <div class="ellipsis">...</div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- <div class="container mt-5">
+        <div class="order-card">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <strong>Order #SO-13487</strong>
+                    <div class="text-muted">Gasper Antunes</div>
+                </div>
+                <img src="https://via.placeholder.com/60" alt="Product Image">
+            </div>
+            <div class="order-details d-flex justify-content-between mt-3">
+                <div>Total: $2674.00</div>
+                <div class="order-status fulfilled">Fulfilled</div>
+                <div>Created: Today</div>
+            </div>
+        </div>
+    
+        <div class="order-card">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <strong>Order #SO-13453</strong>
+                    <div class="text-muted">Aartsen van</div>
+                </div>
+                <img src="https://via.placeholder.com/60" alt="Product Image">
+            </div>
+            <div class="order-details d-flex justify-content-between mt-3">
+                <div>Total: $3454.00</div>
+                <div class="order-status confirmed">Confirmed</div>
+                <div>Created: Yesterday</div>
+            </div>
+        </div>
+    
+        <div class="order-card">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <strong>Order #SO-13498</strong>
+                    <div class="text-muted">Trashes Habard</div>
+                </div>
+                <img src="https://via.placeholder.com/60" alt="Product Image">
+            </div>
+            <div class="order-details d-flex justify-content-between mt-3">
+                <div>Total: $6274.00</div>
+                <div class="order-status partially-shipped">Partially shipped</div>
+                <div>Created: May 12, 2020</div>
+            </div>
+        </div>
+    
+        <div class="order-card">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <strong>Order #SO-16499</strong>
+                    <div class="text-muted">Samban Hubart</div>
+                </div>
+                <img src="https://via.placeholder.com/60" alt="Product Image">
+            </div>
+            <div class="order-details d-flex justify-content-between mt-3">
+                <div>Total: $6375.00</div>
+                <div class="order-status fulfilled">Fulfilled</div>
+                <div>Created: May 11, 2020</div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    
+
+
+        <!---------------Footer------------>
+        <div>
+        <div class="footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h4 class="footer-heading">GadgetGalaxy</h4>
+                        <div class="footer-underline"></div>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <h4 class="footer-heading">Quick Links</h4>
+                        <div class="footer-underline"></div>
+                        <div class="mb-2"><a href="" class="text-white">Home</a></div>
+                        <div class="mb-2"><a href="" class="text-white">About Us</a></div>
+
+                        <div class="mb-2"><a href="" class="text-white">Contact Us</a></div>
+                        <div class="mb-2"><a href="" class="text-white">Blogs</a></div>
+                        <div class="mb-2"><a href="" class="text-white">Sitemaps</a></div>
+                    </div>
+                    <div class="col-md-3">
+                        <h4 class="footer-heading">Shop Now</h4>
+                        <div class="footer-underline"></div>
+                        <div class="mb-2"><a href="" class="text-white">Collections</a></div>
+                        <div class="mb-2"><a href="" class="text-white">Trending Products</a></div>
+                        <div class="mb-2"><a href="" class="text-white">New Arrivals Products</a></div>
+                        <div class="mb-2"><a href="" class="text-white">Featured Products</a></div>
+                        <div class="mb-2"><a href="" class="text-white">Cart</a></div>
+                    </div>
+                    <div class="col-md-3">
+                        <h4 class="footer-heading">Reach Us</h4>
+                        <div class="footer-underline"></div>
+                        <div class="mb-2">
+                            <p>
+                                <i class="fa-solid fa-location-dot"></i> 
+                            </p>
+                        </div>
+                        <div class="mb-2">
+                            <a href="" class="text-white">
+                                <i class="fa fa-phone"></i> +91 888-XXX-XXXX
+                            </a>
+                        </div>
+                        <div class="mb-2">
+                            <a href="" class="text-white">
+                                <i class="fa fa-envelope"></i> <!--fundaofwebit@gmail.com-->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <p class=""> &copy;  Ecommerce. All rights reserved.</p><!--2022 - Funda of Web IT - -->
+                    </div>
+                    <div class="col-md-4">
+                        <div class="social-media">
+                            Get Connected:
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="assets/js/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-4.6.2/js/bootstrap.bundle.min.js"></script>  
+    <script type="text/javascript" src="assets/bootstrap-4.6.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
+    <script type="text/javascript" src="assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    
+
+</body>  
+</html>

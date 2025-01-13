@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online shopping</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-4.6.2/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="assets\font-awesome-4.7.0\css\font-awesome.min.css">-->
+    <!--<link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.css">-->
+    <!--<link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">-->
+    <!--<link rel="stylesheet" href="assets/fontawesome-free-6.5.1-web/css/all.min.css">-->
+    <link rel="stylesheet" href="assets/fontawesome-free-6.6.0-web/css/all.min.css">
+    <!--Favicon-->
+    <!--<link rel="icon" type="image/x-icon" href="assets/img/favicon5.png">-->
+    <!--Favicon End-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .navbar-custom-top {
+            background-color: #343a40;
+        }
+        .navbar-custom-top .navbar-brand,
+        .navbar-custom-top .nav-link {
+            color: #ffffff;
+        }
+        .navbar-custom-top .navbar-brand:hover,
+        .navbar-custom-top .nav-link:hover {
+            color: #d3d3d3;
+        }
+        .navbar-custom-bottom {
+            background-color: #f8f9fa;
+        }
+        .navbar-custom-bottom .nav-link {
+            color: #343a40;
+        }
+        .navbar-custom-bottom .nav-link:hover {
+            color: #007bff;
+        }
+        .form-control {
+            max-width: 400px; /* Adjust the width of the search bar if needed */
+        }
+        @media (max-width: 991.98px) {
+            .navbar-top-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .navbar-top-content form {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            .navbar-top-content .d-flex {
+                flex-direction: column;
+                align-items: center;
+            }
+            .navbar-bottom-content {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">Electronic Shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTopContent" aria-controls="navbarTopContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Search Bar and Icons -->
+            <div class="collapse navbar-collapse navbar-top-content" id="navbarTopContent">
+                <form class="d-flex mx-auto" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <div class="d-flex">
+                    <a class="btn btn-outline-light me-2" href="#">
+                        <i class="fas fa-user"></i> Login
+                    </a>
+                    <a class="btn btn-outline-light me-2" href="#">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                    </a>
+                    <a class="btn btn-outline-light" href="#">
+                        <i class="fas fa-heart"></i> Wishlist
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bottom Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom-bottom">
+        <div class="container">
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBottomContent" aria-controls="navbarBottomContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navbar-bottom-content" id="navbarBottomContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link 2</a>
+                    </li>
+                    <!-- Add more links as needed -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bootstrap JS -->
+    <script type="text/javascript" src="assets/js/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-4.6.2/js/bootstrap.bundle.min.js"></script>  
+    <script type="text/javascript" src="assets/bootstrap-4.6.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge" />-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-4.6.2/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="assets\font-awesome-4.7.0\css\font-awesome.min.css">-->
+    <!--<link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.css">-->
+    <!--<link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">-->
+    <!--<link rel="stylesheet" href="assets/fontawesome-free-6.5.1-web/css/all.min.css">-->
+    <link rel="stylesheet" href="assets/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css">
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>details page</title>
+    <style>
+        
+    /*---Navbar Start here---*/
+    .main-navbar{
+      border-bottom: 1px solid #ccc;
+  }
+  .main-navbar .top-navbar{
+      background-color: #2874f0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .main-navbar .top-navbar .brand-name{
+      color: #fff;
+      font-size: 21px;
+  }
+  /*.brand-name{
+    font-size: 18px;
+  }*/
+  .main-navbar .top-navbar .nav-link{
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+  }
+  .main-navbar .top-navbar .dropdown-menu{
+      padding: 0px 0px;
+      border-radius: 0px;
+  }
+  .main-navbar .top-navbar .dropdown-menu .dropdown-item{
+      padding: 8px 16px;
+      border-bottom: 1px solid #ccc;
+      font-size: 14px;
+  }
+  .main-navbar .top-navbar .dropdown-menu .dropdown-item i{
+      width: 20px;
+      text-align: center;
+      color: #2874f0;
+      font-size: 14px;
+  }
+  .main-navbar .navbar{
+      padding: 0px;
+      background-color: #ddd;
+  }
+  .main-navbar .navbar .nav-item .nav-link{
+      padding: 8px 20px;
+      color: #000;
+      font-size: 15px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+      .main-navbar .top-navbar .nav-link{
+          font-size: 12px;
+          padding: 8px 10px;
+      }
+  }
+  @media only screen and (max-width: 700px) {
+    .main-navbar .top-navbar .nav-link{
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}
+    /*--------End of Navbar-------------*/
+
+   /*---------Footer----------------*/
+   .footer-area{
+    padding: 40px 0px;
+    /*background-color: #2874f0;*/
+    background-color: #42464c;
+    color: #fff;
+}
+.footer-area a{
+    text-decoration: none;
+}
+.footer-area .footer-heading{
+    font-size: 24px;
+    color: #fff;
+}
+.footer-area .footer-underline{
+    height: 1px;
+    width: 70px;
+    background-color: #ddd;
+    margin: 10px 0px;
+}
+.copyright-area{
+    padding: 14px 0px;
+    background-color: #262626;
+}
+.copyright-area p{
+    margin-bottom: 0px;
+    color: #fff;
+}
+.copyright-area .social-media{
+    text-align: end;
+    color: #fff;
+}
+.copyright-area .social-media a{
+    margin: 0px 10px;
+    color: #fff;
+    width: 20px;
+}
+
+
+/*****************globals*************/
+/**************** card for product drescription strat **************/
+/*body {
+  font-family: 'open sans';
+  overflow-x: hidden; }*/
+
+img {
+  max-width: 100%; }
+
+.preview {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media screen and (max-width: 996px) {
+    .preview {
+      margin-bottom: 20px; } }
+
+.preview-pic {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; 
+}
+
+.preview-thumbnail.nav-tabs {
+  border: none;
+  margin-top: 15px; 
+}
+  .preview-thumbnail.nav-tabs li {
+    width: 18%;
+    margin-right: 2.5%; 
+  }
+  .preview-thumbnail.nav-tabs li img {
+      max-width: 100%;
+      display: block; 
+      height: 100%;
+  }
+    .preview-thumbnail.nav-tabs li a {
+      padding: 0;
+      margin: 0; 
+  }
+    .preview-thumbnail.nav-tabs li:last-of-type {
+      margin-right: 0; 
+  }
+
+.tab-content {
+  overflow: hidden; 
+}
+  .tab-content img {
+    /*width: 100%;*/
+    width: 90%;
+    -webkit-animation-name: opacity;
+    animation-name: opacity;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s; 
+  }
+
+.card {
+  /*margin-top: 50px;*/
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background: #eee;
+  padding: 3em;
+  line-height: 1.5em; 
+}
+
+@media screen and (min-width: 997px) {
+  .wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; 
+  } 
+  
+}
+
+.details {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.colors {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1; 
+}
+
+.product-title, .price, .sizes, .colors {
+  text-transform: UPPERCASE;
+  font-weight: bold; 
+}
+
+.checked, .price span {
+  color: #ff9f1a; }
+
+.product-title, .rating, .product-description, .price, .vote, .sizes {
+  margin-bottom: 15px; }
+
+.product-title {
+  margin-top: 0; }
+
+.size {
+  margin-right: 10px; 
+}
+.size:first-of-type {
+    margin-left: 40px; 
+}
+
+.color {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  height: 2em;
+  width: 2em;
+  border-radius: 2px; 
+}
+.color:first-of-type {
+    margin-left: 20px;
+}
+
+.add-to-cart, .like {
+  background: #ff9f1a;
+  padding: 1.2em 1.5em;
+  border: none;
+  text-transform: UPPERCASE;
+  font-weight: bold;
+  color: #fff;
+  -webkit-transition: background .3s ease;
+          transition: background .3s ease; 
+  }
+  .add-to-cart:hover, .like:hover {
+    background: #b36800;
+    color: #fff; 
+  }
+
+.not-available {
+  text-align: center;
+  line-height: 2em; 
+}
+  /*.not-available:before {
+    font-family: fontawesome;
+    content: "\f00d";
+    color: #fff; 
+  }*/
+
+.orange {
+  background: #ff9f1a; 
+}
+
+.green {
+  background: #85ad00; }
+
+.blue {
+  background: #0076ad; }
+
+.tooltip-inner {
+  padding: 1.3em; }
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(3);
+            transform: scale(3); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(3);
+            transform: scale(3); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+/*# sourceMappingURL=style.css.map */
+    </style>
+</head>
+<body>
+    <!-- Header -->
+ <!--Navbar-->
+   
+ <div class="main-navbar shadow-sm sticky-top">
+  <div class="top-navbar">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-2 my-auto d-sm-4 d-md-block d-lg-block">  <!--d-none d-sm-none-->
+                  <h5 class="brand-name">GadgetGalaxy</h5>
+              </div>
+              <!--<div class="col-md-5 my-auto">
+                  <form role="search">
+                      <div class="input-group">
+                          <input type="search" placeholder="Search your product" class="form-control" />
+                          <button class="btn bg-white" type="submit">
+                              <i class="fa fa-search"></i>
+                          </button>
+                      </div>
+                  </form>
+              </div>-->
+
+              <div class="col-md-5 my-auto">
+
+                <form action="#" class="search-wrap">
+                    <div class="input-group w-100"> 
+                      <input type="text" class="form-control search-form" style="width:65%;font-size:15px;/* padding-left: 20px; */margin-left: 10px;/* margin-right: 10px; */" placeholder="Search">
+                        <div class="input-group-append"> 
+                          <button class="btn btn-primary search-button" type="submit">
+                           <i class="fa fa-search"></i> 
+                          </button> 
+                        </div>
+                    </div>
+                </form>
+                
+            </div>
+              <div class="col-md-5 my-auto">
+                  <ul class="nav justify-content-end">
+                      
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fa fa-user"></i> Username 
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <a class="dropdown-item" href="login.html">Login</a>
+                          </div>
+                          <div class="col-md-6">
+                            <a class="dropdown-item" href="signup.html">SignUp</a>
+                          </div>
+                        </div>
+                        <!--<li><a class="dropdown-item" href="#">My Account</a></li>-->
+                      <li><a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a></li>
+
+                      <li><a class="dropdown-item" href="#"><i class="fa fa-list"></i> My Orders</a></li>
+                      <li><a class="dropdown-item" href="wishlist.html"><i class="fa fa-heart"></i> My Wishlist</a></li>
+                      <li><a class="dropdown-item" href="cart.html"><i class="fa fa-shopping-cart"></i> My Cart</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+                      </ul>
+                  </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">
+                              <i class="fa fa-shopping-cart"></i> Cart (0)
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">
+                              <i class="fa fa-heart"></i> Wishlist (0)
+                          </a>
+                      </li>
+
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+  
+  <!--<nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+          <!--<a class="navbar-brand d-block d-sm-block d-md-none d-lg-none" href="#">
+              Funda Ecom
+          </a>--
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">All Categories</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">New Arrivals</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Featured Products</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Electronics</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Fashions</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Accessories</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Appliances</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+
+<!--<header class="section-header">
+  <section class="header-main border-bottom">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+              <div class="col-lg-3 col-sm-4 col-md-4 col-5"> 
+                <a href="#" class="brand-wrap" data-abc="true">
+                      <!-- <img class="logo" src="http://ampexamples.com/data/upload/2017/08/bootstrap2_logo.png"> -- 
+                    <span class="logo"><!--BBBOOTSTRAP--
+                      <img src="assets/img/logo.png" alt="">
+                    </span> 
+                </a> 
+              </div>
+
+              <div class="col-lg-4 col-xl-5 col-sm-8 col-md-4 d-none d-md-block">
+
+                  <form action="#" class="search-wrap">
+                      <div class="input-group w-100"> 
+                        <input type="text" class="form-control search-form" style="width:65%; font-size:15px" placeholder="Search">
+                          <div class="input-group-append"> 
+                            <button class="btn btn-primary search-button" type="submit">
+                             <i class="fa fa-search"></i> 
+                            </button> 
+                          </div>
+                      </div>
+                  </form>
+                  
+              </div>
+              <div class="col-lg-5 col-xl-4 col-sm-8 col-md-4 col-7">
+                  <div class="d-flex justify-content-end"> 
+                    <div class="dropdown show">
+                      <a class="btn dropdown-toggle login" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-regular fa-user"></i> User
+                      </a>
+                    
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="login.html">Login</a>
+                        <a class="dropdown-item" href="signup.html">Sign in</a>
+                        <!--<a class="dropdown-item" href="#">Something else here</a>--
+                      </div>
+                    </div>
+
+                    <span class="vl"></span>
+                      <!--<div class="dropdown btn-group"> 
+                        <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-abc="true">
+                          <i class="fas fa fa-bell"></i>
+                        </a>
+                          <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
+                              <li>
+                                  <div class="notification-title">More Info</div>
+                                  <div class="notification-list">
+                                      <div class="list-group"> <a href="affiliates" class="list-group-item list-group-item-action active" data-abc="true">
+                                              <div class="notification-info">
+                                                  <div class="notification-list-user-img"><img src="https://img.icons8.com/nolan/100/000000/helping-hand.png" alt="" class="user-avatar-md rounded-circle"></div>
+                                                  <div class="notification-list-user-block"><span class="notification-list-user-name">Affiliate program</span> </div>
+                                              </div>
+                                          </a> <a href="redemption-center" class="list-group-item list-group-item-action active" data-abc="true">
+                                              <div class="notification-info">
+                                                  <div class="notification-list-user-img"><img src="https://img.icons8.com/bubbles/100/000000/prize.png" alt="" class="user-avatar-md rounded-circle"></div>
+                                                  <div class="notification-list-user-block"><span class="notification-list-user-name">Redemption Center</span> </div>
+                                              </div>
+                                          </a> <a href="#" class="list-group-item list-group-item-action active" data-abc="true">
+                                              <div class="notification-info">
+                                                  <div class="notification-list-user-img"><img src="https://img.icons8.com/ultraviolet/100/000000/medal.png" alt="" class="user-avatar-md rounded-circle"></div>
+                                                  <div class="notification-list-user-block"><span class="notification-list-user-name">Achievements</span> </div>
+                                              </div>
+                                          </a> <a href="#" class="list-group-item list-group-item-action active" data-abc="true">
+                                              <div class="notification-info">
+                                                  <div class="notification-list-user-img"><img src="https://img.icons8.com/bubbles/100/000000/call-female.png" alt="" class="user-avatar-md rounded-circle"></div>
+                                                  <div class="notification-list-user-block"><span class="notification-list-user-name">Contact us</span> </div>
+                                              </div>
+                                          </a> 
+                                      </div>
+                                  </div>
+                              </li>
+                          </ul>
+                      </div> --
+                      <!--<li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i>Cart</a>
+                      </li>--
+                      <a class="nav-link nav-user-img" href="#"><!--data-toggle="modal" data-target="#login-modal" data-abc="true"--
+                        <span class="login"><i class="fas fa fa-shopping-cart"></i> Cart</span>
+                      </a>
+
+                      
+
+                      <span class="vl"></span> 
+                      <a class="nav-link nav-user-img" href="#"><!-- data-toggle="modal" data-target="#login-modal" data-abc="true"--
+                        <span class="login"><i class="fas fa-regular fa-heart"></i> Wishlist</span>
+                      </a>
+                  </div>
+              </div>
+          </div>
+        </div>
+  </section>
+</header>-->
+
+  <nav class="navbar navbar-expand-md navbar-main border-bottom">
+      <div class="container-fluid">
+          <!--<form class="d-md-none my-2">
+              <div class="input-group"> 
+                <input type="text" name="search" class="form-control" placeholder="Search" required="" style="height: auto; font-size:15px;">
+                  <div class="input-group-append"> 
+                    <button type="submit" class="btn btn-secondary"> 
+                      <i class="fa fa-search"></i> 
+                    </button> 
+                  </div>
+              </div>
+          </form> -->
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#dropdown6" aria-expanded="false"> 
+            <span class="navbar-toggler-icon"></span> 
+          </button>
+          <div class="navbar-collapse collapse" id="dropdown6"><!-- style=""-->
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item dropdown"> 
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-abc="true" aria-expanded="false">Laptops</a>
+                      <div class="dropdown-menu"> 
+                        <a class="dropdown-item" href="#" data-abc="true">Lenovo</a> 
+                        <a class="dropdown-item" href="#" data-abc="true">Dell</a> 
+                        <a class="dropdown-item" href="#" data-abc="true">HP</a> 
+                        <a class="dropdown-item" href="#" data-abc="true">Apple</a> 
+                        <a class="dropdown-item" href="#" data-abc="true">Asus</a>
+                      </div>
+                  </li>
+                  <li class="nav-item"> <a class="nav-link" href="#" data-abc="true">Refurbished Mobile</a> </li>
+                  <li class="nav-item"> <a class="nav-link" href="#" data-abc="true">Accessories & Peripheral</a> </li>
+                  <li class="nav-item"> <a class="nav-link" href="#" data-abc="true">Blog</a> </li>
+                  <li class="nav-item"> <a class="nav-link" href="#" data-abc="true">Support</a> </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+<!---- End of Navbar ---->
+
+
+
+
+
+
+      
+      <div class="container" style="padding: 0;">
+        <div class="card">
+          <div class="container-fliud">
+            <div class="wrapper row">
+              <div class="preview col-md-6">
+                
+                <div class="preview-pic tab-content">
+                  <div class="tab-pane active" id="pic-1"><img src="assets/img/earbud1.jpeg" /></div>
+                  <div class="tab-pane" id="pic-2"><img src="assets/img/earbud2.jpeg" /></div>
+                  <div class="tab-pane" id="pic-3"><img src="assets/img/earbud3.jpeg" /></div>
+                  <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
+                  <div class="tab-pane" id="pic-5"><img src="http://placekitten.com/400/252" /></div>
+                </div>
+                <ul class="preview-thumbnail nav nav-tabs">
+                  <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="assets/img/earbud1.jpeg" /></a></li>
+                  <li><a data-target="#pic-2" data-toggle="tab"><img src="assets/img/earbud2.jpeg"></a></li>
+                  <li><a data-target="#pic-3" data-toggle="tab"><img src="assets/img/earbud3.jpeg"></a></li>
+                  <li><a data-target="#pic-4" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
+                  <li><a data-target="#pic-5" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
+                </ul>
+                
+              </div>
+              <div class="details col-md-6">
+                <h3 class="product-title">Earbud</h3>
+                <div class="rating">
+                  <div class="stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <span class="review-no">41 reviews</span>
+                </div>
+                <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</p>
+                <h4 class="price">current price: <span>$180</span></h4>
+                <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
+                <!-- <h5 class="sizes">sizes:
+                  <span class="size" data-toggle="tooltip" title="small">s</span>
+                  <span class="size" data-toggle="tooltip" title="medium">m</span>
+                  <span class="size" data-toggle="tooltip" title="large">l</span>
+                  <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
+                </h5> -->
+                <!--<h5 class="colors">colors:
+                  <span class="color orange not-available" data-toggle="tooltip" title="Not In store"></span>
+                  <span class="color green"></span>
+                  <span class="color blue"></span>
+                </h5>-->
+                <div class="action">
+                  <button class="add-to-cart btn btn-default" type="button">add to cart</button>
+                  <button class="add-to-cart btn btn-default" type="button">Buy Now</button>
+                  <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+
+
+
+             <!---------------Footer------------>
+             <div>
+              <div class="footer-area">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-3">
+                              <h4 class="footer-heading">GadgetGalaxy</h4>
+                              <div class="footer-underline"></div>
+                              <p>
+                                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                              </p>
+                          </div>
+                          <div class="col-md-3">
+                              <h4 class="footer-heading">Quick Links</h4>
+                              <div class="footer-underline"></div>
+                              <div class="mb-2"><a href="" class="text-white">Home</a></div>
+                              <div class="mb-2"><a href="" class="text-white">About Us</a></div>
+      
+                              <div class="mb-2"><a href="" class="text-white">Contact Us</a></div>
+                              <div class="mb-2"><a href="" class="text-white">Blogs</a></div>
+                              <div class="mb-2"><a href="" class="text-white">Sitemaps</a></div>
+                          </div>
+                          <div class="col-md-3">
+                              <h4 class="footer-heading">Shop Now</h4>
+                              <div class="footer-underline"></div>
+                              <div class="mb-2"><a href="" class="text-white">Collections</a></div>
+                              <div class="mb-2"><a href="" class="text-white">Trending Products</a></div>
+                              <div class="mb-2"><a href="" class="text-white">New Arrivals Products</a></div>
+                              <div class="mb-2"><a href="" class="text-white">Featured Products</a></div>
+                              <div class="mb-2"><a href="" class="text-white">Cart</a></div>
+                          </div>
+                          <div class="col-md-3">
+                              <h4 class="footer-heading">Reach Us</h4>
+                              <div class="footer-underline"></div>
+                              <div class="mb-2">
+                                  <p>
+                                      <i class="fa-solid fa-location-dot"></i> 
+                                  </p>
+                              </div>
+                              <div class="mb-2">
+                                  <a href="" class="text-white">
+                                      <i class="fa fa-phone"></i> +91 888-XXX-XXXX
+                                  </a>
+                              </div>
+                              <div class="mb-2">
+                                  <a href="" class="text-white">
+                                      <i class="fa fa-envelope"></i> <!--fundaofwebit@gmail.com-->
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="copyright-area">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-8">
+                              <p class=""> &copy;  Ecommerce. All rights reserved.</p><!--2022 - Funda of Web IT - -->
+                          </div>
+                          <div class="col-md-4">
+                              <div class="social-media">
+                                  Get Connected:
+                                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    
+        <!-- Footer 2-->
+        <!--<footer class="footer">
+          <div class="row">
+            <div class="col d-flex">
+              <h4>INFORMATION</h4>
+              <a href="">About us</a>
+              <a href="">Contact Us</a>
+              <a href="">Term & Conditions</a>
+              <a href="">Shipping Guide</a>
+            </div>
+            <div class="col d-flex">
+              <h4>USEFUL LINK</h4>
+              <a href="">Online Store</a>
+              <a href="">Customer Services</a>
+              <a href="">Promotion</a>
+              <a href="">Top Brands</a>
+            </div>
+            <div class="col d-flex">
+              <span><i class='bx bxl-facebook-square'></i></span>
+              <span><i class='bx bxl-instagram-alt' ></i></span>
+              <span><i class='bx bxl-github' ></i></span>
+              <span><i class='bx bxl-twitter' ></i></span>
+              <span><i class='bx bxl-pinterest' ></i></span>
+            </div>
+          </div>
+        </footer>-->
+    
+    
+      <!-- PopUp -->
+      <!--<div class="popup hide-popup">
+        <div class="popup-content">
+          <div class="popup-close">
+            <i class='bx bx-x'></i>
+          </div>
+          <div class="popup-left">
+            <div class="popup-img-container">
+              <img class="popup-img" src="./images/popup.jpg" alt="popup">
+            </div>
+          </div>
+          <div class="popup-right">
+            <div class="right-content">
+              <h1>Get Discount <span>50%</span> Off</h1>
+              <p>Sign up to our newsletter and save 30% for you next purchase. No spam, we promise!
+              </p>
+              <form action="#">
+                <input type="email" placeholder="Enter your email..." class="popup-form">
+                <a href="#">Subscribe</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>-->
+
+
+    <script type="text/javascript" src="assets/js/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-4.6.2/js/bootstrap.bundle.min.js"></script>  
+    <script type="text/javascript" src="assets/bootstrap-4.6.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
+    <script type="text/javascript" src="assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    
+
+</body>  
+</html>
